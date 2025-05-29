@@ -32,7 +32,7 @@
 
 /* Books section styles */
 .books-section {
-    min-height: 300px;
+    height: 300px;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -118,14 +118,21 @@
 
 .branches-title {
     letter-spacing: 0.5px;
+    font-size: 24px;
+    color: #b91c1c;
+    font-weight: bold;
+    text-align: center;
 }
 
 .location-title {
     color: #b91c1c;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 .location-address {
-    line-height: 1.4;
+    line-height: 1.5;
+    font-size: 16px;
 }
 
 /* Ensure all containers are properly responsive */
@@ -140,13 +147,12 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2rem;
+    .books-section {
+        height: 250px;
     }
     
-    .online-shop-container {
-        flex-direction: column;
-        gap: 1rem;
+    .hero-section h1 {
+        font-size: 2rem;
     }
     
     .hero-title {
@@ -157,51 +163,104 @@
         overflow: visible !important;
         display: inline-block !important;
         padding: 0 5px !important;
-        text-overflow: ellipsis !important;
     }
     
     /* Mobile branch section styles */
     .branches-title {
-        font-size: 1.4rem !important;
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
     }
     
     .location-title {
-        font-size: 1.2rem !important;
+        font-size: 16px !important;
+        margin-bottom: 12px !important;
     }
     
-    .location-address {
-        font-size: 0.9rem !important;
+    .branches-section .flex.items-start {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4px;
+        margin-bottom: 8px;
     }
-    
+
+    .branches-section .flex.items-start svg {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        margin-right: 4px;
+        margin-top: 2px;
+    }
+
+    .branches-section .flex.items-start p {
+        font-size: 13px !important;
+        line-height: 1.4;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     /* Mobile footer styles */
-    .footer-section h2 {
-        font-size: 20px;
+    .footer-section {
+        padding: 20px 0 !important;
+    }
+    
+    .footer-section .container {
+        padding: 0 20px;
+    }
+    
+    .footer-section img {
+        height: 40px !important;
+        margin-bottom: 15px !important;
     }
     
     .footer-info {
-        font-size: 14px;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    /* Fix for online section */
-    .online-heading {
+        font-size: 11px !important;
+        line-height: 1.4;
+        margin-bottom: 8px !important;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         width: 100%;
-        justify-content: center;
-        padding: 0 5px;
+        padding: 0 10px;
     }
     
-    .platform-container {
-        justify-content: center;
-        width: 100%;
+    .footer-info span {
+        font-weight: bold;
+        margin-right: 3px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 380px) {
+    .branches-section .flex.items-start p {
+        font-size: 12px !important;
     }
     
-    .platform-btn {
-        margin: 0 3px;
+    .branches-section .flex.items-start svg {
+        width: 14px;
+        height: 14px;
+        min-width: 14px;
     }
-    
-    .online-logo {
-        max-width: 100px;
-        height: auto !important;
-    }
+}
+
+/* Online shopping section styles */
+.online-shop-container {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.online-logo {
+    max-width: 100px;
+    height: auto !important;
+}
+
+.platform-container {
+    justify-content: center;
+    width: 100%;
+}
+
+.platform-btn {
+    margin: 0 3px;
 }

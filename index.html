@@ -28,8 +28,7 @@
             background-size: contain;
             background-position: center;
             background-repeat: repeat-x;
-            height: auto;
-            padding-bottom: 45%;
+            height: 300px;
             width: 100%;
             position: relative;
         }
@@ -84,6 +83,40 @@
         
         /* Mobile responsiveness */
         @media (max-width: 768px) {
+            .branches-section .flex-col {
+                gap: 8px;
+            }
+            .branches-section .branches-title {
+                font-size: 20px !important;
+                margin-bottom: 16px;
+            }
+            .branches-section .location-title {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            .branches-section .flex.items-start {
+                flex-direction: row;
+                align-items: center;
+                gap: 2px;
+                flex-wrap: nowrap;
+                width: 100%;
+            }
+            .branches-section .flex.items-start p {
+                font-size: 13px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0;
+                padding: 0;
+                max-width: calc(100% - 24px);
+            }
+            .branches-section .flex.items-start svg {
+                width: 18px;
+                height: 18px;
+                min-width: 18px;
+                margin-right: 4px;
+                flex-shrink: 0;
+            }
             .platform-container {
                 flex-direction: row;
                 justify-content: center;
@@ -129,7 +162,7 @@
                 height: 100%;
             }
             .books-section {
-                padding-bottom: 70%;
+                height: 200px;
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -156,6 +189,31 @@
             .location-address span {
                 margin-top: 4px;
             }
+            .footer-section {
+                padding: 20px 0 !important;
+            }
+            .footer-section .container {
+                padding: 0 20px;
+            }
+            .footer-section img {
+                height: 40px !important;
+                margin-bottom: 15px !important;
+            }
+            .footer-info {
+                font-size: 11px !important;
+                line-height: 1.4;
+                margin-bottom: 8px !important;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+                padding: 0 10px;
+            }
+            .footer-info span {
+                font-weight: bold;
+                margin-right: 3px;
+            }
         }
     </style>
 </head>
@@ -169,11 +227,11 @@
             <div class="text-center text-white">
                 <h1 class="text-4xl md:text-5xl font-bold mb-8 hero-title" style="font-family: 'Times New Roman', Times, serif; font-style: italic;">Mở trang sách - Khởi hành trình</h1>
                 <div class="hero-links">
+                     <a href="https://www.huyhoangbook.vn/" target="_blank" class="hero-link inline-block px-8 py-3 border-2 border-white rounded-full text-white hover:bg-white hover:text-red-800 transition duration-300">
+                        Website Huy Hoang Bookstore
+                    </a>
                     <a href="https://www.facebook.com/huyhoangbookstore" target="_blank" class="hero-link inline-block px-8 py-3 border-2 border-white rounded-full text-white hover:bg-white hover:text-red-800 transition duration-300">
                         Fanpage Huy Hoang Bookstore
-                    </a>
-                    <a href="https://www.huyhoangbook.vn/" target="_blank" class="hero-link inline-block px-8 py-3 border-2 border-white rounded-full text-white hover:bg-white hover:text-red-800 transition duration-300">
-                        Website Huy Hoang Bookstore
                     </a>
                 </div>
 
@@ -213,23 +271,23 @@
     <!-- Section 4: Branch Locations -->
     <section class="branches-section py-10 w-full">
         <div class="container mx-auto">
-            <h2 class="text-2xl md:text-2xl font-bold text-red-700 mb-6 branches-title">ĐỊA CHỈ CÁC CHI NHÁNH OFFLINE</h2>
+            <h2 class="branches-title mb-6" style="white-space: nowrap; font-size: 18px; margin-bottom: 20px;">ĐỊA CHỈ CÁC CHI NHÁNH OFFLINE</h2>
             
             <div class="mb-8">
-                <h3 class="text-xl md:text-xl font-bold text-red-700 mb-3 location-title">CƠ SỞ TP. HÀ NỘI</h3>
+                <h3 class="location-title">CƠ SỞ TP. HÀ NỘI</h3>
                 <div class="flex flex-col gap-2">
                     <div class="flex items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-red-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        <p class="text-base md:text-base">110D Ngọc Hà, Ba Đình, HN</p>
+                        <p>110D Ngọc Hà, Ba Đình, HN</p>
                     </div>
                     <div class="flex items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-red-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
-                        <p class="text-base md:text-base">Tel: (0243) 736 5859</p>
+                        <p>Tel: (0243) 736 5859</p>
                     </div>
                 </div>
 
@@ -239,32 +297,32 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        <p class="text-base md:text-base">Phố 19 Tháng 12, Trần Hưng Đạo, Hoàn Kiếm, HN</p>
+                        <p>Phố 19 Tháng 12, Trần Hưng Đạo, Hoàn Kiếm, HN</p>
                     </div>
                     <div class="flex items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-red-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
-                        <p class="text-base md:text-base">Tel: (0243) 736 6075</p>
+                        <p>Tel: (0243) 736 6075</p>
                     </div>
                 </div>
             </div>
             
             <div>
-                <h3 class="text-xl md:text-xl font-bold text-red-700 mb-3 location-title">CƠ SỞ TP. HỒ CHÍ MINH</h3>
+                <h3 class="location-title">CƠ SỞ TP. HỒ CHÍ MINH</h3>
                 <div class="flex flex-col gap-2">
                     <div class="flex items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-red-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        <p class="text-base md:text-base">357A Lê Văn Sỹ, Phường 1, Quận Tân Bình, TP.HCM</p>
+                        <p>357A Lê Văn Sỹ, Phường 1, Quận Tân Bình, TP.HCM</p>
                     </div>
                     <div class="flex items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-red-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
-                        <p class="text-base md:text-base">Tel: (0283) 991 3636</p>
+                        <p>Tel: (0283) 991 3636</p>
                     </div>
                 </div>
             </div>
@@ -278,7 +336,6 @@
                 <a href="https://www.huyhoangbook.vn/" target="_blank">
                     <img src="logohuyhoang.png" alt="Huy Hoàng Bookstore Logo" class="h-16 mb-6 brightness-0 invert">
                 </a>
-                <h2 class="text-2xl font-bold mb-5 text-center">HUY HOÀNG BOOKSTORE</h2>
                 <p class="mb-3 footer-info"><span class="font-bold">HOTLINE:</span> 0243.736.5859 - 0243.736.6075 - 0283.991.3636</p>
                 <p class="footer-info"><span class="font-bold">WEBSITE:</span> <a href="https://www.huyhoangbook.vn/" target="_blank" class="underline">https://www.huyhoangbook.vn/</a></p>
             </div>
