@@ -118,10 +118,9 @@
 
 .branches-title {
     letter-spacing: 0.5px;
-    font-size: 24px;
+    font-size: 30px !important;
     color: #b91c1c;
     font-weight: bold;
-    text-align: center;
 }
 
 .location-title {
